@@ -1,3 +1,6 @@
+/**
+ * @author Chiranjivi Bashyal
+ */
 
 public class Player {
 	private String name;
