@@ -1,3 +1,7 @@
+/**
+ * @author Chiranjivi Bashyal
+ */
+
 public class Dice {
 			
 	private DiceValue value;
