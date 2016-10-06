@@ -31,5 +31,5 @@ public class Dice {
 	/** The method toString returns the details of a Dice object */
 	public String toString() {
 		return value.toString();
-	}
+	}//End of toString method
 }// End of the Dice class 
