@@ -1,29 +1,46 @@
+/** Import some libraries to be used in the code */
 import java.util.List;
 import java.io.*;
 
+/**
+* @reviewer Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 07.10.2016
+* @version 1.1
+*
+*/
+
+/** Start of Main class */
 public class Main {
 	
+	/** Start of main method */
 	public static void main(String[] args) throws Exception {
-		
+	   
+	   /** Declare and initialise variables with public access modifiers */
 	   BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
 
-        Dice d1 = new Dice();
-        Dice d2 = new Dice();
-        Dice d3 = new Dice();
-
+        Dice d1 = new Dice(); // Create an instance d1 of the Dice class
+        Dice d2 = new Dice(); // Create an instance d2 of the Dice class
+        Dice d3 = new Dice(); // Create an instance d3 of the Dice class
+		
+		/** Create an instance player of the Player class */
         Player player = new Player("Fred", 100);
+		
+		/** Create an instance game of Game class */
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
 
         int totalWins = 0;
         int totalLosses = 0;
 
-        while (true)
+        while (true)	//Start of while loop
         {
             int winCount = 0;
             int loseCount = 0;
             
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 100; i++)	//Start of for loop
             {
             	String name = "Fred";
             	int balance = 100;
@@ -67,7 +84,7 @@ public class Main {
                 System.out.print(String.format("%d turns later.\nEnd Game %d: ", turn, i));
                 System.out.println(String.format("%s now has balance %d\n", player.getName(), player.getBalance()));
                 
-            } //for
+            } //End of for loop
             
             System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
             totalWins += winCount;
@@ -75,9 +92,9 @@ public class Main {
 
             String ans = console.readLine();
             if (ans.equals("q")) break;
-        } //while true
+        } //End of while loop
         
         System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
-	}
+	} //End of main method
 
-}
+}	//End of main class
