@@ -1,7 +1,19 @@
+/** Import some libraries to be used in the code */
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+/**
+* @reviewer Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 07.10.2016
+* @version 1.1
+*
+*/
+
+/** Start of DiceValue class */
 public enum DiceValue {
 	CROWN, ANCHOR, HEART, DIAMOND, CLUB, SPADE;
 	
@@ -26,4 +38,4 @@ public enum DiceValue {
 		return values()[random];
 	}
 	
-}
+}//End of DiceValue class
