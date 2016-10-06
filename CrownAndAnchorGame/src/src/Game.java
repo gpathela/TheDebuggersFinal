@@ -1,6 +1,11 @@
 /**
- * @author Chiranjivi Bashyal
- */
+*@reviewer Chiranjivi Bashyal
+*@course Master of Information Technology
+*@subject Programming in Java 2
+*@lecturer Dr Recep Ulusoy
+*@due date 07.10.2016
+*@version 1.1
+*/
 
 import java.util.Collections;
 import java.util.List;
