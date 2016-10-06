@@ -19,15 +19,17 @@ public class Dice {
 		value =  DiceValue.getRandom();
 	}
 	
+	/** The getValue method returns the value of the Dice object */
 	public DiceValue getValue() {
 		return value;
 	}
-
+	
+	/** The roll method returns a random value of the Dice object */
 	public DiceValue roll() {
 		return DiceValue.getRandom();
 	}		
-	
+	/** The method toString returns the details of a Dice object */
 	public String toString() {
 		return value.toString();
 	}
-}
+}// End of the Dice class 
