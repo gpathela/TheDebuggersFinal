@@ -1,7 +1,21 @@
+/** Import the libraries that the class will need */
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Programming in Java 2
+*@lecturer Dr Recep Ulusoy
+*@due date 07.10.2016
+*@version 1.1
+*
+*The DiceValue enum is a special Java class type used to define collections of constants.
+*It contains several constants and two methods to create and get random values of a dice. 
+*/
+
+/** Start of the enum DiceValue */
 public enum DiceValue {
 	CROWN, ANCHOR, HEART, DIAMOND, CLUB, SPADE;
 	
@@ -25,5 +39,4 @@ public enum DiceValue {
 		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal());
 		return values()[random];
 	}
-	
-}
+} // End of the enum DiceValue
