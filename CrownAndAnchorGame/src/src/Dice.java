@@ -7,10 +7,14 @@
 * @version 1.1
 *
 */
+
+/** Start of the class Dice */
 public class Dice {
-			
+	
+	/** Declare the variables with private access modifiers */
 	private DiceValue value;
 	
+	/** A non-argument constructor for a Dice object */ 
 	public Dice() {
 		value =  DiceValue.getRandom();
 	}
