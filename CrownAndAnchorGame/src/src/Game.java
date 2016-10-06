@@ -1,12 +1,26 @@
+/** Import the libraries that the class will need */
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Game {
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Programming in Java 2
+*@lecturer Dr Recep Ulusoy
+*@due date 07.10.2016
+*@version 1.1
+*
+*The Game class is the program that contains the code to create 
+*/
 
+/** Start of the class Game */
+public class Game {
+	/** Declare, initialise variables that will be used in the code */
 	private List<Dice> dice;
 	private List<DiceValue> values;
 	
+	/** Construct a game with a parameter of 3 dice */ 
 	public Game(Dice die1, Dice die2, Dice die3) {
 		if (die1 == null || die2 == null || die3 == null) throw new IllegalArgumentException("Dice cannot be null.");
 		dice = new ArrayList<Dice>();
@@ -46,5 +60,4 @@ public class Game {
 		}
         return winnings;		
 	}
-	
-}
+} // End of the class Game
