@@ -7,6 +7,7 @@
 *@version 1.1
 */
 
+package dice;
 public class Player {
 	private String name;
 	private int balance;
@@ -24,6 +25,11 @@ public class Player {
 	public int getBalance() { return balance; }
 	public int getLimit() { return limit; }
 	
+         //balance increased after winning
+	public void setBalance(int wining){
+            this.balance=balance+wining;
+        }
+        
 	public void setLimit(int limit) {
 		if (limit < 0) throw new IllegalArgumentException("Limit cannot be negative.");
 		if (limit > balance)  throw new IllegalArgumentException("Limit cannot be greater than balance.");

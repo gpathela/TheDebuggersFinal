@@ -7,6 +7,7 @@
 *@version 1.1
 */
 
+package dice;
 import java.util.List;
 import java.io.*;
 
@@ -57,10 +58,21 @@ public class Main {
                 	int winnings = game.playRound(player, pick, bet);
                     cdv = game.getDiceValues();
                     
+                    //count the number of dice that match the selected dice
+                    int count=0;
+                    for(int j=0;j<cdv.size();j++){
+                        if(cdv.get(j)==pick){
+                            count++;
+                        }
+                    }
+                    
                     System.out.printf("Rolled %s, %s, %s\n",
                     		cdv.get(0), cdv.get(1), cdv.get(2));
                     
                     if (winnings > 0) {
+                        //Added
+                            player.setBalance(winnings*count);
+                            
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, player.getBalance());
 	                	winCount++; 
