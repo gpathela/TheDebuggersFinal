@@ -12,11 +12,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
+/** Start of the class Game */
 public class Game {
-
+	/** Declare, initialise variables that will be used in the code */
 	private List<Dice> dice;
 	private List<DiceValue> values;
 	
+	/** Construct a Game object with a parameter of 3 dice */ 	
 	public Game(Dice die1, Dice die2, Dice die3) {
 		if (die1 == null || die2 == null || die3 == null) throw new IllegalArgumentException("Dice cannot be null.");
 		dice = new ArrayList<Dice>();
@@ -59,4 +61,4 @@ public class Game {
         return winnings;		
 	}
 	
-}
+}// End of the class Game
