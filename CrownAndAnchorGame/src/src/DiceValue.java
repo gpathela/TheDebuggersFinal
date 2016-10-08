@@ -6,11 +6,12 @@
 *@due date 07.10.2016
 *@version 1.1
 */
-
+package dice;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+/** Start of the enum DiceValue */
 public enum DiceValue {
 	CROWN, ANCHOR, HEART, DIAMOND, CLUB, SPADE;
 	
@@ -34,5 +35,4 @@ public enum DiceValue {
 		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal());
 		return values()[random];
 	}
-	
-}
+} // End of the enum DiceValue
