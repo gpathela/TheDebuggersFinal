@@ -6,7 +6,6 @@
 *@due date 07.10.2016
 *@version 1.1
 */
-package src;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
