@@ -48,6 +48,17 @@ public class Main {
                 player = new Player(name, balance);
                 player.setLimit(limit);
                 int bet = 5;
+                
+                Scanner input = new Scanner(System.in);
+                //System.out.println("Enter your betting amount");
+                //bet = input.nextInt();
+                //while (bet<=0)
+               // {
+                    //System.out.println("Betting amount should be more than zero");
+                    //System.out.println("Enter your betting amount");
+                    //bet = input.nextInt();
+                //} 
+                
 
                 System.out.println(String.format("Start Game %d: ", i));
                 System.out.println(String.format("%s starts with balance %d, limit %d", 
@@ -63,6 +74,10 @@ public class Main {
                 			turn, player.getName(), bet, pick); 
                 	
                 	int winnings = game.playRound(player, pick, bet);
+                        d1=new Dice();
+                        d2=new Dice();
+                        d3=new Dice();
+                        game=new Game(d1,d2,d3);
                     cdv = game.getDiceValues();
                     
                     System.out.printf("Rolled %s, %s, %s\n",
@@ -90,11 +105,15 @@ public class Main {
             totalWins += winCount;
             totalLosses += loseCount;
 
+            //System.out.println("press 'q' to quit the program");
             String ans = console.readLine();
             if (ans.equals("q")) break;
+            
         } //End of while loop
         
         System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
 	} //End of main method
 
 }	//End of main class
+
+
