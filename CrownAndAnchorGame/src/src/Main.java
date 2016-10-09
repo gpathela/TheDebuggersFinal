@@ -25,7 +25,7 @@ public class Main {
         Dice d3 = new Dice(); // Create an instance d3 of the Dice class
 		
 		/** Create an instance player of the Player class */
-        Player player = new Player("Fred", 100);
+        Player player = new Player("Fred", 100, 80);
 		
 		/** Create an instance game of Game class */
         Game game = new Game(d1, d2, d3);
@@ -34,8 +34,8 @@ public class Main {
         int totalWins = 0;
         int totalLosses = 0;
 
-        while (true)	//Start of while loop
-        {
+        //while (true)	//Start of while loop
+       // {
             int winCount = 0;
             int loseCount = 0;
             
@@ -44,16 +44,31 @@ public class Main {
             	String name = "Fred";
             	int balance = 100;
             	int limit = 0;
-                player = new Player(name, balance);
+                int age = 80;
+                player = new Player(name, balance, age);
                 player.setLimit(limit);
                 int bet = 5;
                 
-                Scanner input = new Scanner(System.in);
-                //System.out.println("Enter your betting amount");
+                Scanner in = new Scanner(System.in);
+                System.out.print("Enter your age: ");
+                age = in.nextInt();
+                while (age < 18)
+                {
+                    System.out.println("");
+                    System.out.println("The minimun age should be 18");
+                    System.out.println("*********************************************");
+                    System.out.println("Enter your age: ");
+                    age = in.nextInt();
+                } 
+                
+                //Scanner input = new Scanner(System.in);
+                //System.out.print("Enter your betting amount: ");
                 //bet = input.nextInt();
-                //while (bet<=0)
-               // {
+               //while (bet<=0)
+                //{
+                  //  System.out.println("");
                     //System.out.println("Betting amount should be more than zero");
+                    //System.out.println("*********************************************");
                     //System.out.println("Enter your betting amount");
                     //bet = input.nextInt();
                 //} 
@@ -77,6 +92,7 @@ public class Main {
                         d2=new Dice();
                         d3=new Dice();
                         game=new Game(d1,d2,d3);
+                        
                     cdv = game.getDiceValues();
                     
                     System.out.printf("Rolled %s, %s, %s\n",
@@ -86,17 +102,26 @@ public class Main {
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, player.getBalance());
 	                	winCount++; 
+                                System.out.println("Winnings are: "+ winCount);
                     }
                     else {
 	                    System.out.printf("%s lost, balance now %d\n\n",
 	                    		player.getName(), player.getBalance());
 	                	loseCount++;
+                            System.out.println("Loosings are: "+ loseCount);
                     }
-                    
+                
                 } //while
-
+                 
                 System.out.print(String.format("%d turns later.\nEnd Game %d: ", turn, i));
                 System.out.println(String.format("%s now has balance %d\n", player.getName(), player.getBalance()));
+            System.out.print("Press 'q' to quit the program or Press enter to start another game: ");
+            String ans = console.readLine();
+            if (ans.equals("q"))
+            {
+                System.out.println("Exiting Game!");
+                i=100;
+            }
                 
             } //End of for loop
             
@@ -104,14 +129,13 @@ public class Main {
             totalWins += winCount;
             totalLosses += loseCount;
 
-            //System.out.println("press 'q' to quit the program");
-            String ans = console.readLine();
-            if (ans.equals("q")) break;
+        System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));    
             
-        } //End of while loop
+       // } //End of while loop
         
-        System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
+        
 	} //End of main method
 
 }	//End of main class
+
 
