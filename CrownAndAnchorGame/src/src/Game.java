@@ -1,4 +1,3 @@
-package src;
 /**
 *@reviewer Chiranjivi Bashyal
 *@course Master of Information Technology
@@ -54,8 +53,6 @@ public class Game {
             throw new IllegalArgumentException("Bet cannot be negative.");
         }
 
-        
-
         int matches = 0;
         for (Dice d : dice) {
             d.roll();
@@ -70,7 +67,7 @@ public class Game {
             player.receiveWinnings(winnings);
         }else {
 			player.takeBet(bet);
-	}
+		}
         return winnings;
     }
 
