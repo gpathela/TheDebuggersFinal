@@ -27,7 +27,7 @@ public class Main {
         Dice d3 = new Dice(); // Create an instance d3 of the Dice class
 		
 		/** Create an instance player of the Player class */
-        Player player = new Player("Fred", 100);
+        Player player = new Player("Fred", 100, 80);
 		
 		/** Create an instance game of Game class */
         Game game = new Game(d1, d2, d3);
@@ -37,7 +37,7 @@ public class Main {
         int totalLosses = 0;
 
         //while (true)	//Start of while loop
-        //{
+       // {
             int winCount = 0;
             int loseCount = 0;
             
@@ -46,14 +46,27 @@ public class Main {
             	String name = "Fred";
             	int balance = 100;
             	int limit = 0;
-                player = new Player(name, balance);
+                int age = 80;
+                player = new Player(name, balance, age);
                 player.setLimit(limit);
                 int bet = 5;
+                
+                Scanner in = new Scanner(System.in);
+                System.out.print("Enter your age: ");
+                age = in.nextInt();
+                while (age < 18)
+                {
+                    System.out.println("");
+                    System.out.println("The minimun age should be 18");
+                    System.out.println("*********************************************");
+                    System.out.println("Enter your age: ");
+                    age = in.nextInt();
+                } 
                 
                 //Scanner input = new Scanner(System.in);
                 //System.out.print("Enter your betting amount: ");
                 //bet = input.nextInt();
-                //while (bet<=0)
+               //while (bet<=0)
                 //{
                   //  System.out.println("");
                     //System.out.println("Betting amount should be more than zero");
@@ -97,12 +110,9 @@ public class Main {
 	                    System.out.printf("%s lost, balance now %d\n\n",
 	                    		player.getName(), player.getBalance());
 	                	loseCount++;
-                                System.out.println("Loosings are: "+ loseCount);
+                            System.out.println("Loosings are: "+ loseCount);
                     }
-                if ((float) winCount/(winCount+loseCount) >= 0.42);
-                    {
-                        System.out.println("Exiting Game!");
-                    }
+                
                 } //while
                  
                 System.out.print(String.format("%d turns later.\nEnd Game %d: ", turn, i));
@@ -121,11 +131,11 @@ public class Main {
             totalWins += winCount;
             totalLosses += loseCount;
 
+        System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));    
             
-            
-        //} //End of while loop
+       // } //End of while loop
         
-        System.out.println(String.format("Overall win rate = %.1f%%", (float)(totalWins * 100) / (totalWins + totalLosses)));
+        
 	} //End of main method
 
 }	//End of main class
