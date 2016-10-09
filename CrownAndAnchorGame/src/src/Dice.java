@@ -6,7 +6,7 @@
 *@due date 07.10.2016
 *@version 1.1
 */
-package dice;
+package src;
 /** Start of the class Dice */
 public class Dice {
 	/** Declare a variables of type DiceValue that will be used in the code */			
