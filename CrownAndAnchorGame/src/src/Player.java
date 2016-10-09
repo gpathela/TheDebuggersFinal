@@ -18,9 +18,10 @@ public class Player {
 	private int limit;
 	
 	/** Construct an Player object with the specified attribute. */
-	public Player(String name, int balance) {
+	public Player(String name, int balance, int age) {
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
 		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");
+                if (age < 18) throw new IllegalArgumentException("Minimum age is 18 ");
 		this.name = name;
 		this.balance = balance;
 		this.limit = 0;
