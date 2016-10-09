@@ -63,7 +63,7 @@ public class Player {
 	/** The method takeBet takes an int amount value as a bet and sets the balance */
 	public void takeBet(int bet) {
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
-                //if (bet == 0) throw new IllegalArgumentException("Bet cannot be Zero.");
+        if (bet == 0) throw new IllegalArgumentException("Bet cannot be Zero.");
 		if (!balanceExceedsLimitBy(bet)) throw new IllegalArgumentException("Placing bet would go below limit.");
 		balance = balance - bet;
 	}
