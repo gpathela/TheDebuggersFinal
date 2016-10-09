@@ -7,8 +7,6 @@
 *@version 1.1
 */
 
-package src;
-
 /** Start of player class */
 public class Player {
 	
