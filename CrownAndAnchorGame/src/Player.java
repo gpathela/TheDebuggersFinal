@@ -57,12 +57,13 @@ public class Player {
 	* amount is greater than the limit 
 	*/
 	public boolean balanceExceedsLimitBy(int amount) {
-		return (balance - amount > limit);
+		return (balance - amount >= limit);
 	}
 	
 	/** The method takeBet takes an int amount value as a bet and sets the balance */
 	public void takeBet(int bet) {
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
+                //if (bet == 0) throw new IllegalArgumentException("Bet cannot be Zero.");
 		if (!balanceExceedsLimitBy(bet)) throw new IllegalArgumentException("Placing bet would go below limit.");
 		balance = balance - bet;
 	}
