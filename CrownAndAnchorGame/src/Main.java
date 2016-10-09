@@ -78,6 +78,7 @@ public class Main {
                         d2=new Dice();
                         d3=new Dice();
                         game=new Game(d1,d2,d3);
+                        
                     cdv = game.getDiceValues();
                     
                     System.out.printf("Rolled %s, %s, %s\n",
@@ -115,5 +116,6 @@ public class Main {
 	} //End of main method
 
 }	//End of main class
+
 
 
