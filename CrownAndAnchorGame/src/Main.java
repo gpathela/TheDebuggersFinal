@@ -50,14 +50,16 @@ public class Main {
                 int bet = 5;
                 
                 Scanner input = new Scanner(System.in);
-                //System.out.println("Enter your betting amount");
-                //bet = input.nextInt();
-                //while (bet<=0)
-               // {
-                    //System.out.println("Betting amount should be more than zero");
-                    //System.out.println("Enter your betting amount");
-                    //bet = input.nextInt();
-                //} 
+                System.out.println("Enter your betting amount");
+                bet = input.nextInt();
+                while (bet<=0)
+                {
+                    System.out.println("");
+                    System.out.println("Betting amount should be more than zero");
+                    System.out.println("*********************************************");
+                    System.out.println("Enter your betting amount");
+                    bet = input.nextInt();
+                } 
                 
 
                 System.out.println(String.format("Start Game %d: ", i));
