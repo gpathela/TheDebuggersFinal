@@ -1,10 +1,10 @@
 /**
-* @reviewer Ramanpreet Kaur
+* @author Ramanpreet Kaur
 * @course Master of Information Technology
 * @subject Professional Programming Practice
 * @instructor Dr Recep Ulusoy
 * @due date 07.10.2016
-* @version 1.1
+* @version 1.2
 *
 */
 
