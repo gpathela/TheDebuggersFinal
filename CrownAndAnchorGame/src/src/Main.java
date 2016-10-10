@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Random;
 import java.io.*;
 
 public class Main {
@@ -31,7 +32,7 @@ public class Main {
             	int age = 18;
                 player = new Player(name, balance, age);
                 player.setLimit(limit);
-                int bet = 0;
+                int bet = 5;
 
                 System.out.println(String.format("Start Game %d: ", i));
                 System.out.println(String.format("%s starts with balance %d, limit %d", 
@@ -48,10 +49,11 @@ public class Main {
                 	
                 	int winnings = game.playRound(player, pick, bet);
                     cdv = game.getDiceValues();
-                    
+                    Random random = new Random();
                     System.out.printf("Rolled %s, %s, %s\n",
-                    		cdv.get(0), cdv.get(1), cdv.get(2));
+                    		cdv.get(random.nextInt(3)),cdv.get(random.nextInt(3)),cdv.get(random.nextInt(3)));
                     
+                    		
                     if (winnings > 0) {
 	                    System.out.printf("%s won %d, balance now %d\n\n",
 	                    		player.getName(), winnings, player.getBalance());
