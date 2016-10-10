@@ -62,7 +62,7 @@ public class Player {
 	/** The method balanceExceedsLimitBy returns true or false if the difference between the balance and the
 		amount is greater than the limit */
 	public boolean balanceExceedsLimitBy(int amount) {
-		return (balance - amount > limit);
+		return (balance - amount >= limit);
 	}
 	
 	/** The method takeBet takes an int amount value as a bet and sets the balance */
