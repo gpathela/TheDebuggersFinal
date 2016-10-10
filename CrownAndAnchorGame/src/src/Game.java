@@ -9,7 +9,7 @@ import java.util.ArrayList;
 *@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy
 *@due date 07.10.2016
-*@version 1.1
+*@version 1.3
 *
 *The Game class is the program that contains the code to create 
 */
@@ -41,7 +41,7 @@ public class Game {
 	public int playRound(Player player, DiceValue pick, int bet ) {		
 		if (player == null) throw new IllegalArgumentException("Player cannot be null.");
 		if (pick == null) throw new IllegalArgumentException("Pick cannot be negative.");
-		if (bet <= 0) throw new IllegalArgumentException("Bet cannot be negative.");
+		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
 		
 		//player.takeBet(bet);
 		    

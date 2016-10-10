@@ -31,7 +31,7 @@ public class Main {
         Dice d3 = new Dice(); // Create an instance d3 of the Dice class
 
 		System.out.println("Welcome to our Crown and Anchor game.");
-        System.out.println("Players 18 or above are allowed to play this game.");
+        System.out.println("Only players 18 or above are allowed to play this game.");
         System.out.print("Enter your first name: ");
         firstName = input.next();
         System.out.print("Enter your balance: ");
@@ -95,8 +95,10 @@ public class Main {
 					System.out.println(String.format("%s now has balance %d\n", player.getName(), player.getBalance()));
 				} // End of the for loop
 			
-				System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
-				System.out.println("To keep playing, press enter. \nTo quit the game, type the letter q, and press enter."); // Display the message for the user to know how to quite the game.
+				System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", 
+				winCount, loseCount, (float) winCount/(winCount+loseCount)));
+				System.out.println("To keep playing, press enter. \nTo quit the game, type the letter q, " +
+				"and press enter."); // Display the message for the user to know how to quite the game.
 				totalWins += winCount;
 				totalLosses += loseCount;
 
