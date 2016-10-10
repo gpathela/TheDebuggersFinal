@@ -70,8 +70,7 @@ public class Main {
 	                    System.out.printf("%s lost, balance now %d\n\n",
 	                    		player.getName(), player.getBalance());
 	                	loseCount++;
-                    }
-                    
+                    }       
                 } // End of the infinite while loop
                 System.out.print(String.format("%d turns later.\nEnd Game %d: ", turn, i));
                 System.out.println(String.format("%s now has balance %d\n", player.getName(), player.getBalance()));
