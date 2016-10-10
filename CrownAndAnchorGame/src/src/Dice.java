@@ -1,3 +1,8 @@
+/**
+*@reviewer Gourav Pathela
+ 
+*/
+
 public class Dice {
 			
 	private DiceValue value;
