@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
 *@reviewer Jean Claude Jino Rousseau
 *@course Master of Information Technology
-*@subject Programming in Java 2
+*@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy
 *@due date 07.10.2016
 *@version 1.1
