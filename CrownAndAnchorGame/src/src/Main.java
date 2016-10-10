@@ -1,7 +1,19 @@
+/** Import some Java libraries and specify the package in which the classes are organized */
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.io.*;
+
+/**
+*@reviewer Gourav Pathela
+*@course Master of Information Technology
+*@subject Programming Principle Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 07.10.2016
+*@version 1.1
+*
+*The class Main is the program that contains the code to run the game and make note of win lose.  
+*/
 
 public class Main {
 	

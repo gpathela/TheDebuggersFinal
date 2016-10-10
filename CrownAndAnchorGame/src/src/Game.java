@@ -1,7 +1,18 @@
+/** Import some Java libraries and specify the package in which the classes are organized */
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+*@reviewer Gourav Pathela
+*@course Master of Information Technology
+*@subject Programming Principle Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 07.10.2016
+*@version 1.1
+*
+*The class Game is the program that contains the code to create create game & its related objects
+*/
 public class Game {
 
 	private List<Dice> dice;

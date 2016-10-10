@@ -1,4 +1,13 @@
-
+/**
+*@reviewer Gourav Pathela
+*@course Master of Information Technology
+*@subject Programming Principle Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 07.10.2016
+*@version 1.1
+*
+*The class Player is the program that contains the code to create a player and its related methods  
+*/
 public class Player {
 	private String name;
 	private int balance;
