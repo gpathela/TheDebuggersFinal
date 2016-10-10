@@ -49,9 +49,10 @@ public class Main {
                 	
                 	int winnings = game.playRound(player, pick, bet);
                     cdv = game.getDiceValues();
-                    Random random = new Random();
+                    
+                    
                     System.out.printf("Rolled %s, %s, %s\n",
-                    		cdv.get(random.nextInt(3)),cdv.get(random.nextInt(3)),cdv.get(random.nextInt(3)));
+                    		cdv.get(0),cdv.get(1),cdv.get(2));
                     
                     		
                     if (winnings > 0) {
