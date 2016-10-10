@@ -8,6 +8,7 @@
 */
 
 import java.util.List;
+import java.util.Random;
 import java.io.*;
 
 /** Start of Main class */
@@ -54,7 +55,7 @@ public class Main {
                 while (age < 18)
                 {
                     System.out.println("");
-                    System.out.println("The minimun age should be 18");
+                    System.out.println("The minimum age should be 18");
                     System.out.println("*********************************************");
                     System.out.println("Enter your age: ");
                     age = in.nextInt();
