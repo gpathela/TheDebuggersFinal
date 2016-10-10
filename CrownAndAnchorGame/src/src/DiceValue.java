@@ -6,7 +6,7 @@ import java.util.Random;
 /**
 *@reviewer Jean Claude Jino Rousseau
 *@course Master of Information Technology
-*@subject Programming in Java 2
+*@subject Programming Principle Practice
 *@lecturer Dr Recep Arif Ulusoy
 *@due date 07.10.2016
 *@version 1.1
