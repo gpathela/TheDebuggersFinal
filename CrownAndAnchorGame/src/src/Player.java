@@ -4,7 +4,7 @@
 *@subject Programming in Java 2
 *@lecturer Dr Recep Ulusoy
 *@due date 07.10.2016
-*@version 1.1
+*@version 1.2
 *
 *The Main class is the program that contains the code to create 
 */
@@ -14,13 +14,16 @@ public class Player {
 	private String name;
 	private int balance;
 	private int limit;
+	private int age; // Add a variable for process step 1
 	
 	/** Construct a Player object with a parameter name and balance */ 
-	public Player(String name, int balance) {
+	public Player(String name, int balance, int age) {
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
 		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");
+		if (age < 0) throw new IllegalArgumentException("Age requirement is greater than of equal to 18");
 		this.name = name;
 		this.balance = balance;
+		this.age = age;
 		this.limit = 0;
 	}
 		
@@ -33,6 +36,11 @@ public class Player {
 	public int getBalance() {
 		return balance; 
 	}
+	
+	/** The method getAge returns the age of an object */
+	public int getAge() {
+		return age; 
+	} 
 	
 	/** The method getLimit returns the limit of an object */
 	public int getLimit() { 
