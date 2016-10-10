@@ -96,6 +96,7 @@ public class Main {
 				} // End of the for loop
 			
 				System.out.println(String.format("Win count = %d, Lose Count = %d, %.2f", winCount, loseCount, (float) winCount/(winCount+loseCount)));
+				System.out.println("To keep playing, press enter. \nTo quit the game, type the letter q, and press enter."); // Display the message for the user to know how to quite the game.
 				totalWins += winCount;
 				totalLosses += loseCount;
 
