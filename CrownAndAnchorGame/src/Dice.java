@@ -26,7 +26,8 @@ public class Dice {
 	
 	/** The roll method returns a random value of the Dice object */
 	public DiceValue roll() {
-		return DiceValue.getRandom();
+		value = DiceValue.getRandom();
+		return value;
 	}		
 	/** The method toString returns the details of a Dice object */
 	public String toString() {
