@@ -7,37 +7,42 @@
 *@version 1.1
 */
 
-/** Start of player class */
+/** Start of the class Player */
 public class Player {
-	
-	/** Declare the variables with private access modifiers */
 	private String name;
 	private int balance;
 	private int limit;
+	private int age; // Add a variable for process step 1
 	
-	/** Construct an Player object with the specified attribute. */
+	/** Construct a Player object with a parameter name and balance */ 
 	public Player(String name, int balance, int age) {
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
 		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");
-                if (age < 18) throw new IllegalArgumentException("Minimum age is 18 ");
+		if (age < 0) throw new IllegalArgumentException("Age requirement is greater than of equal to 18");
 		this.name = name;
 		this.balance = balance;
+		this.age = age;
 		this.limit = 0;
 	}
-	
-	/** The method getName returns the name of an object */	
-	public String getName() {
+		
+	/** The method getName returns the name of an object */
+	public String getName() { 
 		return name; 
 	}
 	
 	/** The method getBalance returns the balance of an object */
-	public int getBalance() { 
-	return balance;
+	public int getBalance() {
+		return balance; 
 	}
+	
+	/** The method getAge returns the age of an object */
+	public int getAge() {
+		return age; 
+	} 
 	
 	/** The method getLimit returns the limit of an object */
 	public int getLimit() { 
-	return limit;
+		return limit; 
 	}
 	
 	/** The method setLimit sets the limit of a player object */
@@ -46,16 +51,14 @@ public class Player {
 		if (limit > balance)  throw new IllegalArgumentException("Limit cannot be greater than balance.");
 		this.limit = limit;
 	}
-	
+
 	/** The method balanceExceedsLimit returns true or false if the balance is greater than the limit */
 	public boolean balanceExceedsLimit() {
 		return (balance > limit);
 	}
 	
-	/** 
-	* The method balanceExceedsLimitBy returns true or false if the difference between the balance and the
-	* amount is greater than the limit 
-	*/
+	/** The method balanceExceedsLimitBy returns true or false if the difference between the balance and the
+		amount is greater than the limit */
 	public boolean balanceExceedsLimitBy(int amount) {
 		return (balance - amount >= limit);
 	}
@@ -63,7 +66,6 @@ public class Player {
 	/** The method takeBet takes an int amount value as a bet and sets the balance */
 	public void takeBet(int bet) {
 		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
-        if (bet == 0) throw new IllegalArgumentException("Bet cannot be Zero.");
 		if (!balanceExceedsLimitBy(bet)) throw new IllegalArgumentException("Placing bet would go below limit.");
 		balance = balance - bet;
 	}
@@ -74,8 +76,9 @@ public class Player {
 		balance = balance + winnings;		
 	}
 	
-	/** The method toString returns the details of a Player object */
+	/** The method toString returns the string of a player by displaying the player's 
+		name, balance, and limit */
 	public String toString() {
 		return String.format("Player: %s, Balance: %d, Limit: %d", name, balance, limit);
 	}
-}	//End of Player class
+} // End of the class Player

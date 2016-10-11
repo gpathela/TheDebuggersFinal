@@ -8,11 +8,10 @@
 */
 /** Start of the class Dice */
 public class Dice {
-	
-	/** Declare the variables with private access modifiers */
+	/** Declare a variables of type DiceValue that will be used in the code */			
 	private DiceValue value;
 	
-	/** A non-argument constructor for a Dice object */ 
+	/** A no-args constructor for a Dice object */ 
 	public Dice() {
 		value =  DiceValue.getRandom();
 	}
@@ -21,15 +20,14 @@ public class Dice {
 	public DiceValue getValue() {
 		return value;
 	}
-	
-	/** The roll method returns a random value of the Dice object */
-	public DiceValue roll() {
-		value =  DiceValue.getRandom();
-		return value;
-		}		
 
-		/** The method toString returns the details of a Dice object */
+	/** The roll returns a random value of the value of the Dice object */
+	public DiceValue roll() {
+		return DiceValue.getRandom();
+	}		
+	
+	/** The toString method returns a string of the value of the Dice object */
 	public String toString() {
 		return value.toString();
-	}//End of toString method
-}// End of the Dice class 
+	}
+} // End of the Dice class 
