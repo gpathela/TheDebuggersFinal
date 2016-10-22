@@ -1,7 +1,18 @@
+/** Import some Java libraries and specify the package in which the classes are organized */
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
+/**
+*@reviewer Gourav Pathela
+*@course Master of Information Technology
+*@subject Programming Principle Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 07.10.2016
+*@version 1.1
+*
+*The class Game is the program that contains the code to create create game & its related objects
+*/
 public class Game {
 
 	private List<Dice> dice;
@@ -27,9 +38,9 @@ public class Game {
 	public int playRound(Player player, DiceValue pick, int bet ) {		
 		if (player == null) throw new IllegalArgumentException("Player cannot be null.");
 		if (pick == null) throw new IllegalArgumentException("Pick cannot be negative.");
-		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
+		if (bet <= 0) throw new IllegalArgumentException("Bet cannot be Zero or Less.");
 		
-		player.takeBet(bet);
+		
 		    
 		int matches = 0;
 		for ( Dice d : dice) {
@@ -43,6 +54,8 @@ public class Game {
 
 		if (matches > 0) {			
 			player.receiveWinnings(winnings);
+		}else {
+			player.takeBet(bet);
 		}
         return winnings;		
 	}
