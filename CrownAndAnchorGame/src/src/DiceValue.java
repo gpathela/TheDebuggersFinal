@@ -1,7 +1,18 @@
+/** Import some Java libraries and specify the package in which the classes are organized */
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+/**
+*@reviewer Gourav Pathela
+*@course Master of Information Technology
+*@subject Programming Principle Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 07.10.2016
+*@version 1.1
+*
+*The class DiceValue is the program that contains the code to create  a dice and its related methods
+*/
 public enum DiceValue {
 	CROWN, ANCHOR, HEART, DIAMOND, CLUB, SPADE;
 	
@@ -22,7 +33,9 @@ public enum DiceValue {
 	}
 	
 	public static DiceValue getRandom() {
-		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal());
+		int random = RANDOM.nextInt(DiceValue.SPADE.ordinal() + 1);
+		
+		//System.out.println(random);
 		return values()[random];
 	}
 	
