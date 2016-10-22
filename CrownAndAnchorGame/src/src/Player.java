@@ -1,12 +1,22 @@
-
+/**
+*@reviewer Gourav Pathela
+*@course Master of Information Technology
+*@subject Programming Principle Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 07.10.2016
+*@version 1.1
+*
+*The class Player is the program that contains the code to create a player and its related methods  
+*/
 public class Player {
 	private String name;
 	private int balance;
 	private int limit;
 	
-	public Player(String name, int balance) {
+	public Player(String name, int balance, int age) {
 		if (name == null || name .isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
 		if (balance < 0) throw new IllegalArgumentException("Balance cannot be negative");
+		if (age < 18) throw new IllegalArgumentException("Age Can not be less than 18");
 		this.name = name;
 		this.balance = balance;
 		this.limit = 0;
@@ -27,11 +37,11 @@ public class Player {
 	}
 	
 	public boolean balanceExceedsLimitBy(int amount) {
-		return (balance - amount > limit);
+		return (balance - amount >= limit);
 	}
 	
 	public void takeBet(int bet) {
-		if (bet < 0) throw new IllegalArgumentException("Bet cannot be negative.");
+		if (bet <= 0) throw new IllegalArgumentException("Bet cannot be zero or less.");
 		if (!balanceExceedsLimitBy(bet)) throw new IllegalArgumentException("Placing bet would go below limit.");
 		balance = balance - bet;
 	}
